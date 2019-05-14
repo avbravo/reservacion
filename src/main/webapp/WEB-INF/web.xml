@@ -55,41 +55,6 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
 
-    <filter>
-        <filter-name>gzipResponseFilter</filter-name>
-        <filter-class>org.omnifaces.filter.GzipResponseFilter</filter-class>
-        <init-param>
-            <description>The threshold size in bytes. Must be a number between 0 and 9999. Defaults to 150.
-            </description>
-            <param-name>threshold</param-name>
-            <param-value>200</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>gzipResponseFilter</filter-name>
-        <servlet-name>Faces Servlet</servlet-name>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>ERROR</dispatcher>
-    </filter-mapping>
-
-    <filter>
-        <filter-name>javamelody</filter-name>
-        <filter-class>net.bull.javamelody.MonitoringFilter</filter-class>
-        <async-supported>true</async-supported>
-       <!-- <init-param>
-            <param-name>storage-directory</param-name>
-            <param-value>/data</param-value>
-        </init-param>-->
-    </filter>
-    <filter-mapping>
-        <filter-name>javamelody</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>ASYNC</dispatcher>
-    </filter-mapping>
-    <listener>
-        <listener-class>net.bull.javamelody.SessionListener</listener-class>
-    </listener>
 <!--    <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
