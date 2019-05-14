@@ -94,7 +94,7 @@
         </dependency>
         
         <!-- page statistics backup on drive -->
-		<dependency>
+<!--		<dependency>
 			<groupId>com.google.apis</groupId>
 			<artifactId>google-api-services-drive</artifactId>
 			<version>v3-rev81-1.22.0</version>
@@ -104,7 +104,7 @@
 					<artifactId>guava-jdk5</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency>-->
 
 		
 
